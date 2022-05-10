@@ -1,38 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
 .App {
-  text-align: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3EBF6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theme-mode {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.theme-mode > div {
+    padding-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#light {
+    background-color: #f3ebf6;
 }
 
-.App-link {
-  color: #61dafb;
+#light .main {
+    background-color: #FFFFFF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#light .theme-mode label {
+    color: #46045e;
+}
+
+#light ::placeholder {
+    color: #c995d9;
+    font-style: italic;
+}
+
+#dark {
+    background-color: #46045e;
+}
+
+#dark .main {
+    background-color: #38004c;
+}
+
+#dark .theme-mode label {
+    color: #FFF;
+}
+
+#dark ::placeholder {
+    color: #f5eded;
+    font-style: italic;
+}
+
+.main {
+    width: 400px;
+    height: 360px;
+    margin: 0 auto;
+    border-radius: 1.5em;
+    box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+    margin: 0;
+    padding-top: 45px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+#light .sign {
+    color: #8C55AA;
+}
+
+#dark .sign {
+    color: #FFFFFF;
+}
+
+.form-wrapper {
+    padding-top: 40px;
+}
+
+.name-pass {
+    width: 76%;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+}
+#light input {
+    color: rgb(114, 14, 142) !important;
+}
+
+#light .name-pass {
+    color: rgb(38, 50, 56);
+    background: rgba(136, 126, 126, 0.04);
+}
+
+#dark .name-pass {
+    color: rgb(91, 20, 114);
+    background: rgb(171, 153, 177);
+}
+
+#dark input {
+    color: rgb(255, 255, 255) !important;
+}
+
+.name-pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding: 10px 40px;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+    text-shadow: 0 0 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    padding-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+}
+
+.react-switch-bg {
+    background: #9c27b0 !important;
 }
